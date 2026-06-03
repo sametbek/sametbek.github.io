@@ -1,0 +1,253 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+nav {
+    background-color: #ddd;
+    color: #333;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+nav .logo {
+    margin: 0;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+nav a:hover {
+    color: #00d2ff;
+}
+.theme-icon {
+    width: 35px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.theme-icon:hover {
+    transform: scale(1.15);
+}
+.hero {
+    position: relative;
+    min-height: 80vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.hero-bg lottie-player {
+    width: 100%;
+    height: 100%;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+}
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+.hero p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+.btn {
+    background-color: #00d2ff;
+    color: #1a1a1a;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    display: inline-block;
+}
+.btn:hover {
+    background-color: #0099cc;
+    color: #fff;
+}
+.btn-small {
+    background-color: #2b2b2b;
+    color: #fff;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-top: 15px;
+    position: relative;
+    z-index: 3;
+}
+.btn-small:hover {
+    background-color: #00d2ff;
+    color: #1a1a1a;
+}
+.section-padding {
+    padding: 80px 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.bg-light {
+    background-color: #fff;
+}
+.skills-title {
+    margin-top: 30px;
+}
+.skills-list {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap;
+}
+.skills-list li {
+    background-color: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #495057;
+}
+.projects-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+.projects-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.projects-bg lottie-player {
+    width: 100%;
+    height: 100%;
+}
+.projects-content {
+    position: relative;
+    z-index: 2;
+}
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+.card {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(221, 221, 221, 0.5);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.card h3 {
+    margin-top: 0;
+}
+.social-links {
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
+}
+.social-links img {
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+.social-links a:hover img {
+    transform: scale(1.15);
+}
+footer {
+    background-color: #ddd;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid #ddd;
+}
+.dark-mode {
+    background-color: #111;
+    color: #fff;
+}
+.dark-mode nav {
+    background-color: #222;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+.dark-mode nav a {
+    color: #fff;
+}
+.dark-mode nav a:hover {
+    color: #00d2ff;
+}
+.dark-mode footer {
+    background-color: #222;
+    color: #fff;
+    border-top: 1px solid #444;
+}
+.dark-mode .hero {
+    background-color: #222;
+}
+.dark-mode .hero-content {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.dark-mode .hero p {
+    color: #fff;
+}
+.dark-mode .bg-light {
+    background-color: #222;
+}
+.dark-mode .card {
+    background-color: rgba(30, 30, 30, 0.85);
+    border-color: rgba(68, 68, 68, 0.5);
+    color: #fff;
+}
+.dark-mode .skills-list li {
+    background-color: #222;
+    color: #fff;
+}
