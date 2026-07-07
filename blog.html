@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+    <nav>
+        <h2 class="logo">SamBek.</h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <img src="pictures/light-button.png" id="darkModeToggle" class="theme-icon" alt="Toggle Theme">
+    </nav>
+    <header id="home" class="hero">
+        <div class="hero-bg">
+            <lottie-player src="pictures/header-animation.json" background="transparent" speed="1" loop autoplay preserveAspectRatio="xMidYMid slice"></lottie-player>
+        </div>
+        <div class="hero-content">
+            <h1>Hi, I'm Samet Bekiroğlu</h1>
+            <p>Computer Engineering Student</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </header>
+    <section id="about" class="section-padding">
+        <h2>About Me</h2>
+        <p>My name is Samet Bekiroğlu, I'm an Erasmus student studying computer engineering in Constantin Brancusi University. </p>
+        <h3 class="skills-title">Technical Skills</h3>
+        <ul class="skills-list">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>SDL</li>
+            <li>Arduino</li>
+        </ul>
+    </section>
+    <section id="projects" class="projects-wrapper bg-light">
+        <div class="projects-bg">
+            <lottie-player src="pictures/projects-animation.json" background="transparent" speed="1" loop autoplay preserveAspectRatio="xMidYMid slice"></lottie-player>
+        </div>
+        <div class="projects-content section-padding">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <div class="card">
+                    <h3>3D Gesture-Controlled Graphics Engine</h3>
+                    <p>Hybrid computer vision and 3D graphics application that allows a user to control real-time 3D rendering using color tracking.</p>
+                    <a href="https://github.com/sametbe/3D-Gesture-Controlled-Graphics-Engine" target="_blank" class="btn-small">View Code</a>
+                </div>
+                <div class="card">
+                    <h3>Smart House Using Ardunio</h3>
+                    <p>A model of a smart house using Ardunio and many sensors.</p>
+                    <a href="https://github.com/sametbe/Smart-House-Using-Arduino-Project" target="_blank" class="btn-small">View Code</a>
+                </div>
+                <div class="card">
+                    <h3>Energy Distribution Network Database</h3>
+                    <p>Clean and reliable relational database to manage an electricity distribution grid using Oracle standards.</p>
+                    <a href="https://github.com/sametbe/Energy-Distribution-Network-Database-Project" target="_blank" class="btn-small">View Code</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="section-padding">
+        <h2>Get In Touch</h2>
+        <p>You can contact me via these links.</p>
+        <div class="social-links">
+            <a href="mailto:sametbekroglu1@gmail.com">
+                <img src="pictures/gmail-white.png" id="gmailIcon" alt="Email Me">
+            </a>
+            <a href="https://github.com/sametbek" target="_blank">
+                <img src="pictures/github-white.png" id="githubIcon" alt="My GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/sametbek/" target="_blank">
+                <img src="pictures/linkedin-white.png" id="linkedinIcon" alt="My LinkedIn">
+            </a>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2026 Samet Bekiroğlu.</p>
+    </footer>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
