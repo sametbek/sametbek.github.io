@@ -109,3 +109,14 @@ if (projectCards.length) {
 }
 
 initLinkedinFallback();
+
+document.getElementById('go-to-fishing-btn').addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    document.body.style.transition = "opacity 1.5s ease";
+    document.body.style.opacity = "0";
+    
+    setTimeout(() => {
+        window.location.href = "/fishing";
+    }, 1500);
+});
