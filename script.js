@@ -112,9 +112,13 @@ initLinkedinFallback();
 
 document.getElementById('go-to-fishing-btn').addEventListener('click', function(e) {
     e.preventDefault();
+   
+    const contentElements = document.querySelectorAll('body > *:not(script)');
     
-    document.body.style.transition = "opacity 1.5s ease";
-    document.body.style.opacity = "0";
+    contentElements.forEach(el => {
+        el.style.transition = "opacity 1.5s ease";
+        el.style.opacity = "0";
+    });
     
     setTimeout(() => {
         window.location.href = "/fishing";
