@@ -101,6 +101,9 @@ document.addEventListener('click', () => {
 
 document.getElementById('game-toggle-btn').addEventListener('click', (e) => {
     e.preventDefault();
+    
+    playSound('buy');
+    
     isGameActive = false;
     document.body.classList.remove('game-active');
     
