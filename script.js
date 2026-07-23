@@ -116,13 +116,7 @@ document.getElementById('go-to-fishing-btn').addEventListener('click', function(
     const contentElements = document.querySelectorAll('main, .site-footer');
     
     contentElements.forEach(el => {
-        
-        el.style.animation = "none";
-        
-        void el.offsetWidth; 
-        
-        el.style.transition = "opacity 1.5s ease";
-        el.style.opacity = "0";
+        el.classList.add('fade-out-content');
     });
     
     setTimeout(() => {
