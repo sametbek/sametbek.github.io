@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sambeknet.github.io/restricted</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Righteous&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+
+  <div id="main-bg-reveal"></div>
+  <div id="black-veil"></div>
+
+  <nav class="centered-nav" id="pageNav">
+    <div class="brand-wrapper">
+      <span class="brand-normal">sambeknet.github.io</span>
+      <span class="brand-scp">sambeknet.github.io</span>
+      <span class="restricted-text">/restricted</span>
+    </div>
+    <a class="nav-placeholder" id="exit-btn" href="javascript:void(0)">
+      <img src="images/arrow.png" class="btn-icon icon-up" alt="Up">
+    </a>
+  </nav>
+
+  <main id="archive-world">
+    <button class="glass-button big-btn hidden-ui" id="big-left">
+      <img src="images/arrow.png" class="btn-icon icon-left" alt="Left">
+    </button>
+
+    <div class="paper-wrapper">
+      <div class="paper" id="paper-container">
+        <canvas id="pdf-canvas"></canvas>
+        <div class="flashlight-overlay"></div>
+      </div>
+      
+      <div class="little-controls hidden-ui">
+        <button class="glass-button little-btn" id="little-left">
+          <img src="images/arrow.png" class="btn-icon icon-left" alt="Left">
+        </button>
+        <button class="glass-button little-btn" id="little-right">
+          <img src="images/arrow.png" class="btn-icon icon-right" alt="Right">
+        </button>
+      </div>
+    </div>
+
+    <button class="glass-button big-btn hidden-ui" id="big-right">
+      <img src="images/arrow.png" class="btn-icon icon-right" alt="Right">
+    </button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
