@@ -21,10 +21,77 @@ window.addEventListener('scroll', () => {
   lastScrollY = currentScrollY;
 });
 
+const whooshAudio = new Audio('sounds/whoosh.mp3');
+const fishingBtn = document.getElementById('go-to-fishing-btn');
+
+let secretClickCount = 0;
+let secretTimer;
+let armedTimer;
+let isArmed = false;
+
 if (scrollTopBtn) {
   scrollTopBtn.addEventListener('click', (event) => {
-    event.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    event.preventDefault(); 
+
+    const icon = scrollTopBtn.querySelector('.btn-icon');
+
+    if (isArmed) {
+        clearTimeout(armedTimer);
+        isArmed = false;
+        
+        whooshAudio.play().catch(()=>{});
+
+        const contentElements = document.querySelectorAll('main, .site-footer');
+        contentElements.forEach(el => {
+            el.style.transition = 'transform 1.5s cubic-bezier(0.5, 0, 1, 1), opacity 1.5s ease-in';
+            el.style.transform = 'translateY(-150vh)';
+            el.style.opacity = '0'; 
+        });
+
+        if (fishingBtn) {
+            fishingBtn.style.transition = 'opacity 0.5s ease';
+            fishingBtn.style.opacity = '0';
+        }
+
+        document.body.classList.add('enter-veil-active');
+
+        setTimeout(() => {
+            window.location.href = "/restricted";
+        }, 1500);
+        
+        return;
+    }
+
+    secretClickCount++;
+    
+    if (secretClickCount === 1) {
+        secretTimer = setTimeout(() => {
+            secretClickCount = 0;
+        }, 5000);
+        
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        
+    } else if (secretClickCount === 3) {
+        clearTimeout(secretTimer);
+        secretClickCount = 0;
+        isArmed = true;
+
+        if (icon) {
+            icon.classList.remove('icon-up');
+            icon.classList.add('icon-down');
+        }
+
+        armedTimer = setTimeout(() => {
+            isArmed = false;
+            if (icon) {
+                icon.classList.remove('icon-down');
+                icon.classList.add('icon-up');
+            }
+        }, 5000);
+        
+    } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   });
 }
 
