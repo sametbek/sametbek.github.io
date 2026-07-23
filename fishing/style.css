@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Pixelify+Sans:wght@400;700&display=swap');
 
 body {
     margin: 0; overflow: hidden;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     user-select: none;
+    
     background: radial-gradient(circle at top, #2d6cdf 0%, #0f172a 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -35,25 +37,29 @@ body.game-active #custom-cursor { opacity: 1; }
 }
 
 .nav-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  color: #f8fafc;
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-decoration: none;
+    display: inline-flex; 
+    align-items: center; 
+    gap: 0.75rem;
+    color: #f8fafc; 
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.04em; 
+    text-decoration: none;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
 }
 
 .brand-container { position: relative; display: inline-grid; align-items: center; }
 .brand-normal { grid-area: 1 / 1; opacity: 1; transition: opacity 1s ease; }
+
 .brand-pixel { 
-    grid-area: 1 / 1; font-family: 'Pixelify Sans', monospace; font-size: 1.2rem;
+    grid-area: 1 / 1; 
+    font-family: 'Pixelify Sans', monospace; 
+    font-size: 1.05rem;
     opacity: 0; transition: opacity 1s ease; 
 }
+
 body.game-active .brand-normal { opacity: 0; }
 body.game-active .brand-pixel { opacity: 1; }
-
 .fishing-text {
     color: #4682B4; opacity: 0; display: inline-block; margin-left: 5px;
     font-family: 'Pixelify Sans', monospace; font-size: 1.2rem;
