@@ -29,6 +29,24 @@ buyAudioMain.volume = 0.15;
 
 const fishingBtn = document.getElementById('go-to-fishing-btn');
 
+if (fishingBtn) {
+    fishingBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        buyAudioMain.play().catch(()=>{});
+        
+        const contentElements = document.querySelectorAll('main, .site-footer');
+        
+        contentElements.forEach(el => {
+            el.classList.add('fade-out-content');
+        });
+        
+        setTimeout(() => {
+            window.location.href = "/fishing";
+        }, 1500);
+    });
+}
+
 let secretClickCount = 0;
 let secretTimer;
 let armedTimer;
@@ -54,22 +72,15 @@ if (scrollTopBtn) {
         });
 
         if (fishingBtn) {
-    fishingBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        buyAudioMain.play().catch(()=>{});
-        
-        const contentElements = document.querySelectorAll('main, .site-footer');
-        
-        contentElements.forEach(el => {
-            el.classList.add('fade-out-content');
-        });
-        
+            fishingBtn.style.transition = 'opacity 0.5s ease';
+            fishingBtn.style.opacity = '0';
+        }
+
+        document.body.classList.add('enter-veil-active');
+
         setTimeout(() => {
-            window.location.href = "/fishing";
+            window.location.href = "/restricted";
         }, 1500);
-    });
-}
         
         return;
     }
@@ -188,18 +199,3 @@ if (projectCards.length) {
 }
 
 initLinkedinFallback();
-
-document.getElementById('go-to-fishing-btn').addEventListener('click', function(e) {
-    e.preventDefault();
-    
-    const contentElements = document.querySelectorAll('main, .site-footer');
-    
-    contentElements.forEach(el => {
-        el.classList.add('fade-out-content');
-    });
-    
-    setTimeout(() => {
-        window.location.href = "/fishing";
-        window.location.href = "/restricted";
-    }, 1500);
-});
