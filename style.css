@@ -19,7 +19,7 @@ body {
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-body > *:not(script):not(nav) {
+main, .site-footer {
   opacity: 0;
   animation: siteFadeIn 1.5s ease forwards;
 }
