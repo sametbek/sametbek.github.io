@@ -113,7 +113,7 @@ initLinkedinFallback();
 document.getElementById('go-to-fishing-btn').addEventListener('click', function(e) {
     e.preventDefault();
     
-    const contentElements = document.querySelectorAll('body > *:not(script):not(nav)');
+    const contentElements = document.querySelectorAll('main, .site-footer');
     
     contentElements.forEach(el => {
         el.style.transition = "opacity 1.5s ease";
